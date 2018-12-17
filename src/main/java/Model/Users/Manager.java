@@ -34,7 +34,7 @@ public class Manager {
     }
 
     public boolean isValidLength(int length){
-        return length >= 5;
+        return length >= 5; // let's assume that 5 is a minimum length of a book
     }
 
     public void addMediaItemToLibrary(MediaItem mediaItem) {

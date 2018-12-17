@@ -10,7 +10,7 @@ public class Book extends MediaItem implements Readable {
 
     @Override
     public LengthType getLengthType() {
-        return LengthType.minutes;
+        return LengthType.pages;
     }
 
     @Override

@@ -8,7 +8,7 @@ public abstract class MediaItem {
     private String publisher;
     private Date date;
     private String genre;
-    private int Length;
+    private int length;
     private boolean availability;
 
     public MediaItem(String title, String author, String publisher, Date date, String genre, int length, boolean availability) {
@@ -17,7 +17,7 @@ public abstract class MediaItem {
         this.publisher = publisher;
         this.date = date;
         this.genre = genre;
-        Length = length;
+        this.length = length;
         this.availability = availability;
     }
 
@@ -62,11 +62,11 @@ public abstract class MediaItem {
     }
 
     public int getLength() {
-        return Length;
+        return length;
     }
 
     public void setLength(int length) {
-        Length = length;
+        this.length = length;
     }
 
     public boolean isAvailability() {
@@ -78,4 +78,15 @@ public abstract class MediaItem {
     }
 
     public abstract LengthType getLengthType();
+
+    public String preview() {
+        StringBuilder preview = new StringBuilder();
+        preview.append("Title: " + title + "\n");
+        preview.append("Author: " + author + "\n");
+        preview.append("Publisher: " + publisher + "\n");
+        preview.append("Release: " + date + "\n");
+        preview.append("Genre: " + genre + "\n");
+        preview.append("Length: " + length + " " + getLengthType() + "\n");
+        return preview.toString();
+    }
 }
