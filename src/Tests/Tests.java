@@ -6,7 +6,6 @@ import main.java.Model.MediaItems.Book;
 import main.java.Model.MediaItems.Movie;
 import main.java.Model.MediaItems.Music;
 import main.java.Model.Users.Manager;
-import main.java.Model.Users.User;
 import org.junit.Test;
 import org.junit.Before;
 
@@ -16,7 +15,6 @@ import static org.junit.Assert.assertEquals;
 
 public class Tests {
     private MediaItemsLibrary mediaItemsLibrary = Controller.mediaItemsLibrary;
-    private User user = new User();
     private Manager manager = new Manager();
     private Book book = new Book("Title of Book", "Author of Book", "Name of Publisher", new Date(1990, 12, 22), "Genre of Book", 666, true);
     private Movie movie = new Movie("Title of Movie", "Author of Movie", "Name of Publisher", new Date(1995, 10, 12), "Genre of Movie", 666, true);

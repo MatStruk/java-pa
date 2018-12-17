@@ -19,7 +19,6 @@ public class Controller {
 
     public void init(){
         // Example use
-        User user = new User();
         Manager manager = new Manager();
         View view = new View();
         Book book = new Book("Title of Book", "Author of Book", "Name of Publisher", new Date(1990, 12, 22), "Genre of Book", 666, true);
