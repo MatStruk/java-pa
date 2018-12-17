@@ -13,10 +13,6 @@ public class MediaItemsLibrary {
         return mediaItemsLibrary;
     }
 
-    public void setMediaItemsLibrary(List<MediaItem> mediaItemsLibrary) {
-        this.mediaItemsLibrary = mediaItemsLibrary;
-    }
-
     public void addMediaItemToLibrary(MediaItem mediaItem) {
         mediaItemsLibrary.add(mediaItem);
     }

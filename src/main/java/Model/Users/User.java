@@ -2,6 +2,7 @@ package main.java.Model.Users;
 
 import main.java.Model.MediaItems.MediaItem;
 
+import javax.print.attribute.standard.Media;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +10,12 @@ public class User {
     List<MediaItem> rentedMediaItems = new ArrayList<>();
     List<MediaItem> reservedMediaItems = new ArrayList<>();
 
-    public void searchForMediaItems(String pharse) {
-        // TODO
+    public List<MediaItem> searchForMediaItems(String pharse) {
+        // TODO: convert pharse to lowerCase, create temporary List<MediaItem> and add there all matching single items.
+        // Consider creating method mediaItemKeywords which will convert all data into for example lowerCase String, then
+        // use contains
+        List<MediaItem> temporary = new ArrayList<>();
+        return temporary;
     }
 
     public void previewMediaItem() {
@@ -29,7 +34,8 @@ public class User {
         // TODO
     }
 
-    public void checkWhetherMediaItemIsAvailable(MediaItem mediaItem) {
+    public boolean checkWhetherMediaItemIsAvailable(MediaItem mediaItem) {
         // TODO
+        return false;
     }
 }

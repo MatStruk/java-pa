@@ -29,7 +29,7 @@ public class Manager {
                     book.setLength(length);
                 }
             }
-            book.setAvailability(availability);
+            book.setAvailable(availability);
         }
     }
 
