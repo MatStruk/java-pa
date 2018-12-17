@@ -26,8 +26,8 @@ public class Tests {
     public void init() {
         mediaItemsLibrary.getMediaItemsLibrary().clear(); // clears changes applied by previous tests
         mediaItemsLibrary.addMediaItemToLibrary(book);
-        mediaItemsLibrary.addMediaItemToLibrary(book);
-        mediaItemsLibrary.addMediaItemToLibrary(book);
+        mediaItemsLibrary.addMediaItemToLibrary(movie);
+        mediaItemsLibrary.addMediaItemToLibrary(music);
     }
 
     @Test

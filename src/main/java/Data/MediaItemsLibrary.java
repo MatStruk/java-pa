@@ -1,6 +1,5 @@
 package main.java.Data;
 
-import main.java.Model.MediaItems.Book;
 import main.java.Model.MediaItems.MediaItem;
 
 import java.util.ArrayList;
@@ -18,11 +17,11 @@ public class MediaItemsLibrary {
         this.mediaItemsLibrary = mediaItemsLibrary;
     }
 
-    public void addMediaItemToLibrary(Book book) {
-        mediaItemsLibrary.add(book);
+    public void addMediaItemToLibrary(MediaItem mediaItem) {
+        mediaItemsLibrary.add(mediaItem);
     }
 
-    public void removeMediaItemFromLibrary(Book book) {
-        mediaItemsLibrary.remove(book);
+    public void removeMediaItemFromLibrary(MediaItem mediaItem) {
+        mediaItemsLibrary.remove(mediaItem);
     }
 }

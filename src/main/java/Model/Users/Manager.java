@@ -2,6 +2,7 @@ package main.java.Model.Users;
 
 import main.java.Controller.Controller;
 import main.java.Model.MediaItems.Book;
+import main.java.Model.MediaItems.MediaItem;
 
 import java.util.Date;
 
@@ -36,11 +37,11 @@ public class Manager {
         return length >= 5;
     }
 
-    public void addMediaItemToLibrary(Book book) {
-        Controller.mediaItemsLibrary.addMediaItemToLibrary(book);
+    public void addMediaItemToLibrary(MediaItem mediaItem) {
+        Controller.mediaItemsLibrary.addMediaItemToLibrary(mediaItem);
     }
 
-    public void removeMediaItemFromLibrary(Book book) {
-        Controller.mediaItemsLibrary.removeMediaItemFromLibrary(book);
+    public void removeMediaItemFromLibrary(MediaItem mediaItem) {
+        Controller.mediaItemsLibrary.removeMediaItemFromLibrary(mediaItem);
     }
 }
