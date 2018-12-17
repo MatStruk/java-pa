@@ -7,7 +7,6 @@ import main.java.Model.MediaItems.Movie;
 import main.java.Model.MediaItems.Music;
 import main.java.Model.Users.Manager;
 import main.java.Model.Users.User;
-import main.java.View.View;
 import org.junit.Test;
 import org.junit.Before;
 
