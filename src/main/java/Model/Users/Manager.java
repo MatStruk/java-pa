@@ -1,5 +1,6 @@
 package main.java.Model.Users;
 
+import main.java.Controller.Controller;
 import main.java.Model.MediaItems.Book;
 
 import java.util.Date;
@@ -33,5 +34,13 @@ public class Manager {
 
     public boolean isValidLength(int length){
         return length >= 5;
+    }
+
+    public void addMediaItemToLibrary(Book book) {
+        Controller.mediaItemsLibrary.addMediaItemToLibrary(book);
+    }
+
+    public void removeMediaItemFromLibrary(Book book) {
+        Controller.mediaItemsLibrary.removeMediaItemFromLibrary(book);
     }
 }

@@ -24,38 +24,40 @@ public class Tests {
 
     @Before
     public void init() {
-        mediaItemsLibrary.getMediaItemsLibrary.clear(); // clears changes applied by previous tests
+        mediaItemsLibrary.getMediaItemsLibrary().clear(); // clears changes applied by previous tests
         mediaItemsLibrary.addMediaItemToLibrary(book);
-        mediaItemsLibrary.addMediaItemToLibrary(movie);
-        mediaItemsLibrary.addMediaItemToLibrary(music);
+        mediaItemsLibrary.addMediaItemToLibrary(book);
+        mediaItemsLibrary.addMediaItemToLibrary(book);
     }
 
     @Test
     public void testEditMediaItem() {
+        int indexOfBook = mediaItemsLibrary.getMediaItemsLibrary().indexOf(book);
         manager.editMediaItem(book, "NOT Title of NOT BOOK", null, null, null, null, -1, true);
-        assertEquals("NOT Title of NOT BOOK", mediaItemsLibrary.getMediaItems.get(book).getTitle());
+        assertEquals("NOT Title of NOT BOOK", mediaItemsLibrary.getMediaItemsLibrary().get(indexOfBook).getTitle());
     }
 
     @Test
     public void testSkipEditingIfNull() {
+        int indexOfBook = mediaItemsLibrary.getMediaItemsLibrary().indexOf(book);
         manager.editMediaItem(book, null, null, null, null, null, -1, true);
-        assertEquals("Title of Book", mediaItemsLibrary.getMediaItems.get(book).getTitle());
-        assertEquals("Author of Book", mediaItemsLibrary.getMediaItems.get(book).getAuthor());
-        assertEquals("Name of Publisher", mediaItemsLibrary.getMediaItems.get(book).getPublisher());
-        assertEquals(new Date(1990, 12, 22), mediaItemsLibrary.getMediaItems.get(book).getDate());
-        assertEquals("Genre of Book", mediaItemsLibrary.getMediaItems.get(book).getGenre());
-        assertEquals(666, mediaItemsLibrary.getMediaItems.get(book).getLength());
+        assertEquals("Title of Book", mediaItemsLibrary.getMediaItemsLibrary().get(indexOfBook).getTitle());
+        assertEquals("Author of Book", mediaItemsLibrary.getMediaItemsLibrary().get(indexOfBook).getAuthor());
+        assertEquals("Name of Publisher", mediaItemsLibrary.getMediaItemsLibrary().get(indexOfBook).getPublisher());
+        assertEquals(new Date(1990, 12, 22), mediaItemsLibrary.getMediaItemsLibrary().get(indexOfBook).getDate());
+        assertEquals("Genre of Book", mediaItemsLibrary.getMediaItemsLibrary().get(indexOfBook).getGenre());
+        assertEquals(666, mediaItemsLibrary.getMediaItemsLibrary().get(indexOfBook).getLength());
     }
 
     @Test
     public void testAddMediaItem() {
         manager.addMediaItemToLibrary(book);
-        assertEquals(4, mediaItemsLibrary.getMediaItems.size());
+        assertEquals(4, mediaItemsLibrary.getMediaItemsLibrary().size());
     }
 
     @Test
     public void testRemoveMediaItem() {
         manager.removeMediaItemFromLibrary(book);
-        assertEquals(2, mediaItemsLibrary.getMediaItems.size());
+        assertEquals(2, mediaItemsLibrary.getMediaItemsLibrary().size());
     }
 }
