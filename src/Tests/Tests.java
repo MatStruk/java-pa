@@ -1,7 +1,15 @@
 package Tests;
 
+import main.java.Controller.Controller;
+import main.java.Data.MediaItemsLibrary;
+import main.java.Model.MediaItems.Book;
+import main.java.Model.MediaItems.Movie;
+import main.java.Model.MediaItems.Music;
+import main.java.Model.Users.Manager;
+import main.java.Model.Users.User;
 import org.junit.Test;
 import org.junit.Before;
+
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
